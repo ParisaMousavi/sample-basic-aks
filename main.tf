@@ -121,7 +121,7 @@ module "aks" {
   # log_analytics_workspace_id = data.terraform_remote_state.monitoring.outputs.log_analytics_workspace_id
   identity_ids = [module.aks_cluster_m_id.id]
   aad_config = {
-    managed                = false
+    managed                = true
     admin_group_object_ids = []
     azure_rbac_enabled     = false
     tenant_id              = var.tenant_id
