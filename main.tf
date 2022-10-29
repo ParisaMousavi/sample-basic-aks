@@ -96,7 +96,8 @@ module "aks_name" {
 module "aks_node_rg_name" {
   source             = "github.com/ParisaMousavi/az-naming//rg?ref=2022.10.07"
   prefix             = var.prefix
-  name               = "aks-node"
+  name               = var.name
+  assembly           = "aks-nodes"
   stage              = var.stage
   location_shortname = var.location_shortname
 }
