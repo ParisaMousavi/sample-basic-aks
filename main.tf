@@ -122,7 +122,7 @@ module "aks" {
   identity_ids = [module.aks_cluster_m_id.id]
   aad_config = {
     managed                = true
-    admin_group_object_ids = []
+    admin_group_object_ids = [data.azuread_group.aks_cluster_admin.id]
     azure_rbac_enabled     = false
     tenant_id              = var.tenant_id
   }
