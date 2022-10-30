@@ -17,7 +17,7 @@ resource "kubernetes_cluster_role_binding" "arc_user" {
   subject {
     kind      = "ServiceAccount"
     name      = kubernetes_service_account.arc_user.metadata.0.name
-    namespace = "*"
+    namespace = "default"
   }
 }
 
